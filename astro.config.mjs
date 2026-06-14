@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://farrelghozy.github.io',
+  base: '/my-portofolio',
   server: {
     host: true
   },
