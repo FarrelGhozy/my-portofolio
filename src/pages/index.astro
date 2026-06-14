@@ -5,6 +5,7 @@ const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
+  { href: '#resume', label: 'Resume' },
   { href: '#research', label: 'Research' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -12,7 +13,7 @@ const navLinks = [
 const skills = [
   {
     category: 'Frontend',
-    items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS', 'Astro', 'Bootstrap'],
+    items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'React', 'Tailwind CSS', 'Astro', 'Bootstrap'],
     icon: 'frontend',
   },
   {
@@ -27,13 +28,18 @@ const skills = [
   },
   {
     category: 'Database & Infra',
-    items: ['MongoDB', 'MySQL', 'Docker', 'Linux', 'Nginx', 'Vercel'],
+    items: ['MongoDB', 'MySQL', 'Docker', 'Linux', 'Windows', 'Nginx', 'Proxmox', 'K3s', 'Vercel'],
     icon: 'infra',
   },
   {
     category: 'ML / AI',
     items: ['TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy', 'Jupyter'],
     icon: 'ml',
+  },
+  {
+    category: 'Non-Technical',
+    items: ['Time Management', 'Communication', 'Problem Solving', 'Team Leadership'],
+    icon: 'nontech',
   },
 ];
 
@@ -87,6 +93,59 @@ const collabProjects = [
     desc: 'Lightweight sovereign AI for on-device victim localization in post-disaster aerial assessment. Collaborator on ML model development.',
     tags: ['Jupyter', 'Python', 'AI', 'Disaster Response'],
     link: 'https://github.com/jaweed3/RescueVision',
+  },
+];
+
+const education = {
+  university: 'Universitas Darussalam Gontor',
+  location: 'Ponorogo, Indonesia',
+  major: 'Teknik Informatika',
+  gpa: '3.79/4.00',
+};
+
+const awards = [
+  {
+    title: 'Juara 2, Coding Day',
+    year: '2026',
+    desc: 'Berhasil meraih juara 2 dalam bidang pembuatan web dari seluruh mahasiswa Teknik Informatika',
+  },
+];
+
+const organizations = [
+  {
+    name: 'Himpunan Mahasiswa Teknik Informatika',
+    role: 'Kader Akademik',
+    period: 'April 2024 – Mei 2025',
+  },
+  {
+    name: 'Bengel TI',
+    role: 'Kader',
+    period: 'Maret 2024 – Maret 2025',
+  },
+  {
+    name: 'Asisten Praktikum Dasar Pemrograman',
+    role: 'Asisten Praktikum',
+    period: 'Februari 2025 – Agustus 2025',
+  },
+  {
+    name: 'Asisten Praktikum Algoritma dan Struktur Data',
+    role: 'Asisten Praktikum',
+    period: 'Februari 2025 – Agustus 2025',
+  },
+  {
+    name: 'Festival Teknik Informatika',
+    role: 'Ketua',
+    period: 'Agustus 2024 – September 2024',
+  },
+  {
+    name: 'Himpunan Mahasiswa Teknik Informatika',
+    role: 'Ketua',
+    period: 'Mei 2025 – Sekarang',
+  },
+  {
+    name: 'Bengel Unida Technology Center',
+    role: 'Ketua Staff Unit Usaha',
+    period: 'April 2025 – Sekarang',
   },
 ];
 ---
@@ -326,6 +385,9 @@ const collabProjects = [
             {skill.icon === 'ml' && (
               <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
             )}
+            {skill.icon === 'nontech' && (
+              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            )}
           </div>
 
           <h3 class="text-lg font-bold text-white mb-4">{skill.category}</h3>
@@ -435,11 +497,83 @@ const collabProjects = [
   </div>
 </section>
 
+<!-- Resume Section -->
+<section id="resume" class="py-24 md:py-32 bg-surface-900/50 relative">
+  <div class="absolute inset-0 bg-grid opacity-20"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-16">
+      <span class="text-brand-500 font-mono text-sm">04.</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Resume</h2>
+      <div class="flex-1 max-w-xs gradient-line"></div>
+    </div>
+
+    <!-- Education -->
+    <div class="mb-16">
+      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+        Education
+      </h3>
+      <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-8 card-hover">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h4 class="text-lg font-bold text-white">{education.university}</h4>
+            <p class="text-brand-400 font-medium">{education.major}</p>
+            <p class="text-surface-200/60 text-sm mt-1">{education.location}</p>
+          </div>
+          <div class="text-right">
+            <span class="text-3xl font-bold text-brand-400">{education.gpa}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="mb-16">
+      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        Awards & Achievements
+      </h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        {awards.map((award) => (
+          <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-6 card-hover">
+            <div class="flex items-start justify-between mb-3">
+              <h4 class="text-lg font-bold text-white">{award.title}</h4>
+              <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30">{award.year}</span>
+            </div>
+            <p class="text-surface-200/70 text-sm leading-relaxed">{award.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Organization Experience -->
+    <div>
+      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+        Organization & Leadership
+      </h3>
+      <div class="space-y-4">
+        {organizations.map((org) => (
+          <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-6 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+              <div>
+                <h4 class="text-base font-bold text-white">{org.name}</h4>
+                <p class="text-brand-400 text-sm font-medium">{org.role}</p>
+              </div>
+              <span class="text-surface-200/50 text-sm font-mono">{org.period}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Research Section -->
 <section id="research" class="py-24 md:py-32 bg-surface-900/50 relative">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">04.</span>
+      <span class="text-brand-500 font-mono text-sm">05.</span>
       <h2 class="text-3xl md:text-4xl font-bold text-white">Research & Learning</h2>
       <div class="flex-1 max-w-xs gradient-line"></div>
     </div>
@@ -485,7 +619,7 @@ const collabProjects = [
 <section id="contact" class="py-24 md:py-32 relative">
   <div class="max-w-3xl mx-auto px-6 text-center">
     <div class="flex items-center justify-center gap-4 mb-6">
-      <span class="text-brand-500 font-mono text-sm">05.</span>
+      <span class="text-brand-500 font-mono text-sm">06.</span>
       <h2 class="text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
     </div>
 
