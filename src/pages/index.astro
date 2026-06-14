@@ -549,7 +549,7 @@ const organizations = [
           <div class="group relative bg-surface-900/60 border border-brand-900/30 rounded-2xl overflow-hidden card-hover">
             <div class="aspect-[16/10] overflow-hidden bg-surface-800">
               <img
-                src={`${import.meta.env.BASE_URL}${award.image}`}
+                src={`${basePath}${award.image}`}
                 alt={award.title}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 onerror="this.parentElement.innerHTML='<div class=\"flex items-center justify-center h-full text-surface-500 text-sm\">Ganti file ini di public/{award.image}</div>'"
