@@ -111,11 +111,13 @@ const awards = [
     title: 'Juara 2, Coding Day',
     year: '2026',
     desc: 'Berhasil meraih juara 2 dalam bidang pembuatan web dari seluruh mahasiswa Teknik Informatika',
+    image: 'award-coding-day.webp',
   },
   {
     title: 'The Best Thematic, Hackathon SRE ITB',
     year: '2026',
     desc: 'Meraih penghargaan The Best Thematic pada Hackathon SRE ITB 2026',
+    image: 'award-sre-itb.webp',
   },
 ];
 
@@ -544,12 +546,22 @@ const organizations = [
       </h3>
       <div class="grid md:grid-cols-2 gap-6">
         {awards.map((award) => (
-          <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-6 card-hover">
-            <div class="flex items-start justify-between mb-3">
-              <h4 class="text-lg font-bold text-white">{award.title}</h4>
-              <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30">{award.year}</span>
+          <div class="group relative bg-surface-900/60 border border-brand-900/30 rounded-2xl overflow-hidden card-hover">
+            <div class="aspect-[16/10] overflow-hidden bg-surface-800">
+              <img
+                src={`${import.meta.env.BASE_URL}${award.image}`}
+                alt={award.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.parentElement.innerHTML='<div class=\"flex items-center justify-center h-full text-surface-500 text-sm\">Ganti file ini di public/{award.image}</div>'"
+              />
             </div>
-            <p class="text-surface-200/70 text-sm leading-relaxed">{award.desc}</p>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h4 class="text-lg font-bold text-white">{award.title}</h4>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30 flex-shrink-0">{award.year}</span>
+              </div>
+              <p class="text-surface-200/70 text-sm leading-relaxed">{award.desc}</p>
+            </div>
           </div>
         ))}
       </div>
