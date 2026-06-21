@@ -13,32 +13,72 @@ const navLinks = [
 const skills = [
   {
     category: 'Frontend',
-    items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'React', 'Tailwind CSS', 'Astro', 'Bootstrap'],
+    items: [
+      { name: 'JavaScript', level: 5 },
+      { name: 'TypeScript', level: 4 },
+      { name: 'React', level: 4 },
+      { name: 'Tailwind CSS', level: 4 },
+      { name: 'Astro', level: 4 },
+      { name: 'HTML & CSS', level: 5 },
+      { name: 'Bootstrap', level: 3 },
+    ],
     icon: 'frontend',
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'Python', 'PHP', 'C++', 'REST API'],
+    items: [
+      { name: 'Node.js', level: 4 },
+      { name: 'Express', level: 4 },
+      { name: 'Python', level: 3 },
+      { name: 'PHP', level: 3 },
+      { name: 'C++', level: 3 },
+      { name: 'REST API', level: 4 },
+    ],
     icon: 'backend',
   },
   {
     category: 'Mobile',
-    items: ['Kotlin', 'Android Studio', 'XML Layout'],
+    items: [
+      { name: 'Kotlin', level: 3 },
+      { name: 'Android Studio', level: 3 },
+      { name: 'XML Layout', level: 3 },
+    ],
     icon: 'mobile',
   },
   {
     category: 'Database & Infra',
-    items: ['MongoDB', 'MySQL', 'Docker', 'Linux', 'Windows', 'Nginx', 'Proxmox', 'K3s', 'Vercel'],
+    items: [
+      { name: 'MongoDB', level: 4 },
+      { name: 'MySQL', level: 3 },
+      { name: 'Docker', level: 3 },
+      { name: 'Linux', level: 4 },
+      { name: 'Nginx', level: 3 },
+      { name: 'Proxmox', level: 3 },
+      { name: 'K3s', level: 2 },
+      { name: 'Vercel', level: 3 },
+    ],
     icon: 'infra',
   },
   {
     category: 'ML / AI',
-    items: ['TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy', 'Jupyter'],
+    items: [
+      { name: 'TensorFlow', level: 3 },
+      { name: 'PyTorch', level: 3 },
+      { name: 'Pandas', level: 4 },
+      { name: 'NumPy', level: 4 },
+      { name: 'scikit-learn', level: 3 },
+      { name: 'Jupyter', level: 4 },
+    ],
     icon: 'ml',
   },
   {
-    category: 'Non-Technical',
-    items: ['Time Management', 'Communication', 'Problem Solving', 'Team Leadership'],
+    category: 'Professional',
+    items: [
+      { name: 'Time Management', level: 4 },
+      { name: 'Communication', level: 5 },
+      { name: 'Problem Solving', level: 5 },
+      { name: 'Team Leadership', level: 4 },
+    ],
     icon: 'nontech',
   },
 ];
@@ -46,31 +86,35 @@ const skills = [
 const projects = [
   {
     title: 'Kasir UTC 02',
-    desc: 'Point-of-sale system for Unida Technology Centre workshop. Features transaction management, service ticketing, inventory tracking, and WhatsApp bot integration.',
-    tags: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'WAHA', 'Vercel'],
+    desc: 'Point-of-sale system for Unida Technology Centre workshop. Features transaction management, service ticketing, inventory tracking, and WhatsApp bot integration with WAHA.',
+    tags: ['Node.js', 'Express', 'MongoDB', 'WAHA', 'Vercel'],
     link: 'https://github.com/FarrelGhozy/Kasir_UTC_02',
     status: 'Production',
+    color: 'teal',
   },
   {
-    title: 'CNN vs Transfer Learning untuk Klasifikasi Citra',
+    title: 'CNN vs Transfer Learning',
     desc: 'Research project comparing CNN architectures and Transfer Learning approaches for image classification. Includes model training, evaluation pipelines, and performance analysis.',
     tags: ['Python', 'TensorFlow', 'PyTorch', 'Jupyter', 'Deep Learning'],
     link: 'https://github.com/FarrelGhozy/CNN-vs-Transfer-Learning-untuk-Klasifikasi-Citra',
     status: 'Research',
+    color: 'amber',
   },
   {
-    title: 'sembako-chain-ai',
+    title: 'Sembako Chain AI',
     desc: 'AI-based hybrid food distribution ecosystem for price stabilization and economic inclusion. Combines multi-criteria analysis with ML-powered recommendations.',
     tags: ['TypeScript', 'AI', 'Recommendation System', 'Multi-criteria'],
     link: 'https://github.com/FarrelGhozy/sembako-chain-ai',
     status: 'Active',
+    color: 'purple',
   },
   {
-    title: 'retakId',
-    desc: 'Crowdsourcing platform for early detection of landslide soil cracks. Community-driven reporting, mapping, and alert system.',
+    title: 'Retak ID',
+    desc: 'Crowdsourcing platform for early detection of landslide soil cracks. Community-driven reporting, interactive mapping, and alert system.',
     tags: ['JavaScript', 'Crowdsourcing', 'Mapping', 'Community'],
     link: 'https://github.com/FarrelGhozy/retakId',
     status: 'Active',
+    color: 'emerald',
   },
   {
     title: 'Deforest.id',
@@ -78,19 +122,20 @@ const projects = [
     tags: ['LaTeX', 'Academic', 'Research'],
     link: 'https://github.com/FarrelGhozy/Deforest.id',
     status: 'Research',
+    color: 'amber',
   },
 ];
 
 const collabProjects = [
   {
-    title: 'corrupt (jaweed3)',
-    desc: 'Corruption Education Simulator — interactive simulation to educate about corruption impacts. Contributor to this collaborative project.',
+    title: 'Corrupt (jaweed3)',
+    desc: 'Corruption Education Simulator — interactive simulation to educate about corruption impacts. Contributed to this collaborative project.',
     tags: ['JavaScript', 'Education', 'Simulation'],
     link: 'https://github.com/jaweed3/corrupt',
   },
   {
     title: 'RescueVision (jaweed3)',
-    desc: 'Lightweight sovereign AI for on-device victim localization in post-disaster aerial assessment. Collaborator on ML model development.',
+    desc: 'Lightweight sovereign AI for on-device victim localization in post-disaster aerial assessment. Collaborated on ML model development.',
     tags: ['Jupyter', 'Python', 'AI', 'Disaster Response'],
     link: 'https://github.com/jaweed3/RescueVision',
   },
@@ -101,62 +146,34 @@ const basePath = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const education = {
   university: 'Universitas Darussalam Gontor',
   location: 'Ponorogo, Indonesia',
-  major: 'Teknik Informatika',
+  major: 'Informatics Engineering',
   semester: 'Semester 5',
   gpa: '3.79/4.00',
 };
 
 const awards = [
   {
-    title: 'Juara 2, Coding Day',
+    title: '2nd Place, Coding Day',
     year: '2026',
-    desc: 'Berhasil meraih juara 2 dalam bidang pembuatan web dari seluruh mahasiswa Teknik Informatika',
+    desc: 'Achieved 2nd place in web development competition among all Informatics Engineering students.',
     image: 'award-coding-day.webp',
   },
   {
     title: 'The Best Thematic, Hackathon SRE ITB',
     year: '2026',
-    desc: 'Meraih penghargaan The Best Thematic pada Hackathon SRE ITB 2026',
+    desc: 'Awarded The Best Thematic at the SRE ITB 2026 Hackathon.',
     image: 'award-sre-itb.webp',
   },
 ];
 
 const organizations = [
-  {
-    name: 'Himpunan Mahasiswa Teknik Informatika',
-    role: 'Kader Akademik',
-    period: 'April 2024 – Mei 2025',
-  },
-  {
-    name: 'Bengel TI',
-    role: 'Kader',
-    period: 'Maret 2024 – Maret 2025',
-  },
-  {
-    name: 'Asisten Praktikum Dasar Pemrograman',
-    role: 'Asisten Praktikum',
-    period: 'Februari 2025 – Agustus 2025',
-  },
-  {
-    name: 'Asisten Praktikum Algoritma dan Struktur Data',
-    role: 'Asisten Praktikum',
-    period: 'Februari 2025 – Agustus 2025',
-  },
-  {
-    name: 'Festival Teknik Informatika',
-    role: 'Ketua',
-    period: 'Agustus 2024 – September 2024',
-  },
-  {
-    name: 'Himpunan Mahasiswa Teknik Informatika',
-    role: 'Ketua',
-    period: 'Mei 2025 – Sekarang',
-  },
-  {
-    name: 'Bengel Unida Technology Center',
-    role: 'Ketua Staff Unit Usaha',
-    period: 'April 2025 – Sekarang',
-  },
+  { name: 'Himpunan Mahasiswa Teknik Informatika', role: 'Academic Cadre', period: 'Apr 2024 – May 2025' },
+  { name: 'Bengel TI', role: 'Cadre', period: 'Mar 2024 – Mar 2025' },
+  { name: 'Teaching Assistant — Basic Programming', role: 'TA', period: 'Feb 2025 – Aug 2025' },
+  { name: 'Teaching Assistant — Algorithms & Data Structures', role: 'TA', period: 'Feb 2025 – Aug 2025' },
+  { name: 'Festival Teknik Informatika', role: 'Chairperson', period: 'Aug 2024 – Sep 2024' },
+  { name: 'Himpunan Mahasiswa Teknik Informatika', role: 'Chairperson', period: 'May 2025 – Present' },
+  { name: 'Bengel Unida Technology Center', role: 'Head of Business Unit', period: 'Apr 2025 – Present' },
 ];
 ---
 
@@ -176,7 +193,7 @@ const organizations = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-sm font-medium text-surface-200 hover:text-brand-400 transition-colors duration-200"
+          class="text-sm font-medium text-surface-300 hover:text-brand-400 transition-colors duration-200"
         >
           {link.label}
         </a>
@@ -184,7 +201,7 @@ const organizations = [
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-surface-200 hover:text-brand-400 transition-colors" aria-label="Toggle menu">
+    <button id="mobile-menu-btn" class="md:hidden text-surface-300 hover:text-brand-400 transition-colors" aria-label="Toggle menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -196,7 +213,7 @@ const organizations = [
     {navLinks.map((link) => (
       <a
         href={link.href}
-        class="block text-sm font-medium text-surface-200 hover:text-brand-400 transition-colors"
+        class="block text-sm font-medium text-surface-300 hover:text-brand-400 transition-colors"
       >
         {link.label}
       </a>
@@ -206,63 +223,58 @@ const organizations = [
 
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center bg-surface-950 bg-grid overflow-hidden">
-  <!-- Radial Glow -->
+  <!-- Radial glow -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-radial-glow"></div>
 
-  <!-- Floating Orbs -->
+  <!-- Animated orbiting particles -->
   <div class="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-brand-500/40 animate-float"></div>
-  <div class="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-brand-400/30 animate-float animation-delay-400"></div>
-  <div class="absolute bottom-1/3 left-1/3 w-4 h-4 rounded-full bg-brand-600/20 animate-float animation-delay-800"></div>
+  <div class="absolute top-1/3 right-1/4 w-2.5 h-2.5 rounded-full bg-brand-400/30 animate-float animation-delay-400" style="animation-duration: 8s;"></div>
+  <div class="absolute bottom-1/3 left-1/3 w-4 h-4 rounded-full bg-brand-600/20 animate-float animation-delay-800" style="animation-duration: 7s;"></div>
+  <div class="absolute top-1/2 right-1/6 w-2 h-2 rounded-full bg-brand-300/20 animate-float animation-delay-200" style="animation-duration: 9s;"></div>
+  <div class="absolute bottom-1/4 right-1/3 w-3 h-3 rounded-full bg-brand-400/15 animate-float animation-delay-600" style="animation-duration: 10s;"></div>
 
   <!-- Orbit Ring -->
-  <div class="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] border border-brand-800/20 rounded-full">
-    <div class="absolute top-1/2 left-0 w-3 h-3 -translate-y-1/2 rounded-full bg-brand-500 animate-orbit shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+  <div class="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] border border-brand-800/15 rounded-full">
+    <div class="absolute top-1/2 left-0 w-3 h-3 -translate-y-1/2 rounded-full bg-brand-500 animate-orbit shadow-[0_0_20px_rgba(59,130,246,0.5)]"></div>
   </div>
 
   <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-    <!-- Greeting Badge -->
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up">
+    <!-- Availability Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
       <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-      <span class="text-sm font-medium text-surface-200">Available for collaboration</span>
+      <span class="text-sm font-medium text-surface-300">Available for collaboration</span>
     </div>
 
     <!-- Main Heading -->
-    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-6">
+    <h1 class="heading-xl mb-4">
       <span class="text-white">Hi, I'm </span>
       <span class="text-brand-400 glow-text">Farrel Ghozy</span>
     </h1>
 
-    <!-- Subtitle -->
-    <p class="text-lg sm:text-xl md:text-2xl font-light text-surface-200 mb-4">
-      Junior Web Developer
-      <span class="text-brand-500 mx-2">&</span>
-      Informatics Student
+    <!-- Dynamic Subtitle -->
+    <p class="text-lg sm:text-xl md:text-2xl font-light text-surface-300 mb-3">
+      <span id="typing-text" class="inline-block"></span>
+      <span class="animate-pulse text-brand-400">|</span>
     </p>
 
     <!-- Description -->
-    <p class="text-base md:text-lg text-surface-200/70 max-w-2xl mx-auto mb-10">
-      Learning full-stack development, experimenting with machine learning,
+    <p class="body-lg text-surface-400 max-w-2xl mx-auto mb-10">
+      Full-stack development enthusiast, exploring machine learning,
       and building projects one commit at a time.
     </p>
 
-    <!-- CTA Buttons -->
+    <!-- CTAs -->
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a
-        href="#projects"
-        class="group px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand-900/50 hover:shadow-brand-700/50 hover:-translate-y-0.5"
-      >
+      <a href="#projects" class="btn-primary group">
         View My Work
-        <span class="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
+        <span class="inline-block ml-1 transition-transform group-hover:translate-x-1">→</span>
       </a>
-      <a
-        href="#contact"
-        class="px-8 py-3.5 border border-brand-700/50 hover:border-brand-500 text-brand-400 font-semibold rounded-xl transition-all duration-300 hover:bg-brand-950/50 hover:-translate-y-0.5"
-      >
+      <a href="#contact" class="btn-secondary">
         Get In Touch
       </a>
     </div>
 
-    <!-- Scroll Indicator -->
+    <!-- Scroll indicator -->
     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
       <svg class="w-5 h-5 text-brand-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -273,89 +285,94 @@ const organizations = [
 
 <!-- About Section -->
 <section id="about" class="py-24 md:py-32 relative">
-  <div class="absolute inset-0 bg-grid opacity-30"></div>
+  <div class="absolute inset-0 bg-grid-subtle opacity-40"></div>
   <div class="relative max-w-6xl mx-auto px-6">
-    <!-- Section Header -->
-    <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">01.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
-      <div class="flex-1 max-w-xs gradient-line"></div>
+    <div class="section-header reveal">
+      <span class="section-number">01.</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
     </div>
 
     <div class="grid md:grid-cols-5 gap-12 items-start">
       <!-- Text -->
-      <div class="md:col-span-3 space-y-5 text-surface-200/80">
-        <p>
+      <div class="md:col-span-3 space-y-5 body-md reveal reveal-delay-1">
+        <p class="text-surface-300">
           I'm an Informatics student at
           <span class="text-brand-400 font-medium">Universitas Darussalam Gontor</span>
-          passionate about web development and machine learning. I'm still
-          learning and growing as a developer, and I love building projects
+          passionate about web development and machine learning. I love building projects
           that solve real problems.
         </p>
-        <p>
+        <p class="text-surface-300">
           Currently working on a point-of-sale system for
           <span class="text-brand-400 font-medium">Unida Technology Centre</span>
-          using JavaScript, Node.js, and MongoDB — integrating WhatsApp bot
-          automation and inventory management features.
+          using Node.js, Express, and MongoDB — integrating WhatsApp bot
+          automation and inventory management.
         </p>
-        <p>
+        <p class="text-surface-300">
           I'm also exploring deep learning — comparing CNN architectures
           with Transfer Learning for image classification, and building
           ML pipelines with Python and Jupyter.
         </p>
-        <p>
-          I'm continuously learning new technologies and improving my skills
+        <p class="text-surface-300">
+          Continuously learning new technologies and improving my skills
           through hands-on projects, coursework, and open source collaboration.
         </p>
 
         <!-- Quick Facts -->
         <div class="grid grid-cols-2 gap-4 pt-4">
-          <div class="flex items-center gap-3">
-            <span class="text-brand-500">▹</span>
-            <span>Web Development</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-brand-500">▹</span>
-            <span>Machine Learning</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-brand-500">▹</span>
-            <span>Android (Kotlin)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-brand-500">▹</span>
-            <span>Open Source</span>
-          </div>
+          {[
+            ['Web Development', '▹'],
+            ['Machine Learning', '▹'],
+            ['Android (Kotlin)', '▹'],
+            ['Open Source', '▹'],
+          ].map(([label, marker]) => (
+            <div class="flex items-center gap-3 text-sm text-surface-300">
+              <span class="text-brand-400">{marker}</span>
+              <span>{label}</span>
+            </div>
+          ))}
         </div>
       </div>
 
       <!-- Profile Card -->
-      <div class="md:col-span-2">
+      <div class="md:col-span-2 reveal reveal-delay-2">
         <div class="relative group">
-          <div class="absolute -inset-0.5 bg-gradient-to-br from-brand-600 to-brand-800 rounded-2xl opacity-30 group-hover:opacity-50 blur transition-opacity duration-500"></div>
-          <div class="relative bg-surface-900 border border-brand-800/30 rounded-2xl p-8 glow-border">
+          <div class="absolute -inset-0.5 bg-gradient-to-br from-brand-600 to-brand-800 rounded-2xl opacity-25 group-hover:opacity-40 blur transition-opacity duration-500"></div>
+          <div class="relative bg-surface-800 border border-brand-800/25 rounded-2xl p-8 glow-card">
             <!-- Avatar -->
-            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-brand-500/30 shadow-lg shadow-brand-900/50">
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-brand-500/20 shadow-lg shadow-brand-900/30">
               <img src={`${basePath}fotoProfil.webp`} alt="Farrel Ghozy" class="w-full h-full object-cover" />
             </div>
             <div class="text-center space-y-2">
-              <h3 class="text-xl font-bold text-white">Farrel Ghozy Affifudin</h3>
+              <h3 class="heading-md">Farrel Ghozy Affifudin</h3>
               <p class="text-brand-400 text-sm font-medium">Informatics Student</p>
-              <p class="text-surface-200/60 text-sm">Universitas Darussalam Gontor</p>
+              <p class="text-surface-400 text-sm">Universitas Darussalam Gontor</p>
             </div>
-            <div class="mt-6 pt-6 border-t border-brand-800/30 flex justify-center gap-4">
-              <a href="https://github.com/FarrelGhozy" target="_blank" rel="noopener noreferrer" class="text-surface-200/60 hover:text-brand-400 transition-colors" aria-label="GitHub">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="mailto:farrelafif05@gmail.com" target="_blank" rel="noopener noreferrer" class="text-surface-200/60 hover:text-brand-400 transition-colors" aria-label="Email">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              </a>
-              <a href="https://linkedin.com/in/farrelghozy" target="_blank" rel="noopener noreferrer" class="text-surface-200/60 hover:text-brand-400 transition-colors" aria-label="LinkedIn">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </a>
-              <a href="https://instagram.com/farrelgzy" target="_blank" rel="noopener noreferrer" class="text-surface-200/60 hover:text-brand-400 transition-colors" aria-label="Instagram">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 6.5h.01M12 2a10 10 0 00-3.16.54 10.01 10.01 0 00-6.3 6.3A10 10 0 0012 22a10 10 0 0010-10 10.01 10.01 0 00-6.3-6.3A10 10 0 0012 2zm0 4a6 6 0 100 12 6 6 0 000-12zm-4 6a4 4 0 118 0 4 4 0 01-8 0z"/></svg>
-              </a>
+
+            <!-- Social links in profile card -->
+            <div class="mt-6 pt-6 border-t border-brand-800/25 flex justify-center gap-5">
+              {[
+                { href: 'https://github.com/FarrelGhozy', label: 'GitHub', viewBox: '0 0 24 24',
+                  path: 'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' },
+                { href: 'mailto:farrelafif05@gmail.com', label: 'Email', viewBox: '0 0 24 24', fill: 'none',
+                  path: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
+                { href: 'https://linkedin.com/in/farrelghozy', label: 'LinkedIn', viewBox: '0 0 24 24',
+                  path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
+                { href: 'https://instagram.com/farrelgzy', label: 'Instagram', viewBox: '0 0 24 24', fill: 'none',
+                  path: 'M16.5 6.5h.01M12 2a10 10 0 00-3.16.54 10.01 10.01 0 00-6.3 6.3A10 10 0 0012 22a10 10 0 0010-10 10.01 10.01 0 00-6.3-6.3A10 10 0 0012 2zm0 4a6 6 0 100 12 6 6 0 000-12zm-4 6a4 4 0 118 0 4 4 0 01-8 0z' },
+              ].map((social) => (
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-surface-400 hover:text-brand-400 transition-colors"
+                  aria-label={social.label}
+                >
+                  <svg class="w-5 h-5" fill={social.fill || 'currentColor'} stroke={social.fill === 'none' ? 'currentColor' : 'none'} viewBox={social.viewBox}>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={social.path} />
+                  </svg>
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -366,37 +383,39 @@ const organizations = [
 
 <!-- Skills Section -->
 <section id="skills" class="py-24 md:py-32 bg-surface-900/50 relative">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">02.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Tech Stack</h2>
-      <div class="flex-1 max-w-xs gradient-line"></div>
+  <div class="absolute inset-0 bg-grid-subtle opacity-30"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="section-header reveal">
+      <span class="section-number">02.</span>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="section-line"></div>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {skills.map((skill) => (
+      {skills.map((skill, idx) => (
         <div
-          class="group relative bg-surface-900/80 border border-brand-900/30 rounded-2xl p-6 card-hover"
+          class="card-base p-6 reveal"
+          class:list={{ 'reveal-delay-1': idx % 3 === 1, 'reveal-delay-2': idx % 3 === 2 }}
         >
           <!-- Category Icon -->
-          <div class="w-12 h-12 rounded-xl bg-brand-950 border border-brand-800/30 flex items-center justify-center mb-4 group-hover:border-brand-600/50 transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-brand-950 border border-brand-800/30 flex items-center justify-center mb-4 group-hover:border-brand-600/50 transition-colors">
             {skill.icon === 'frontend' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             )}
             {skill.icon === 'backend' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
             )}
             {skill.icon === 'mobile' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
             )}
             {skill.icon === 'infra' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
             )}
             {skill.icon === 'ml' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
             )}
             {skill.icon === 'nontech' && (
-              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <svg class="w-5.5 h-5.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             )}
           </div>
 
@@ -404,9 +423,18 @@ const organizations = [
 
           <div class="flex flex-wrap gap-2">
             {skill.items.map((item) => (
-              <span class="px-3 py-1 text-xs font-medium rounded-lg bg-brand-950/80 text-brand-300 border border-brand-800/30">
-                {item}
-              </span>
+              <div class="group/tag relative">
+                <span class="tag">{item.name}</span>
+                <!-- Skill level dots tooltip -->
+                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover/tag:opacity-100 transition-opacity pointer-events-none flex gap-0.5">
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <div
+                      class="skill-dot"
+                      class:list={{ 'filled': i < item.level }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -417,35 +445,36 @@ const organizations = [
 
 <!-- Projects Section -->
 <section id="projects" class="py-24 md:py-32 relative">
-  <div class="absolute inset-0 bg-grid opacity-20"></div>
+  <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
   <div class="relative max-w-6xl mx-auto px-6">
-    <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">03.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Projects</h2>
-      <div class="flex-1 max-w-xs gradient-line"></div>
+    <div class="section-header reveal">
+      <span class="section-number">03.</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-line"></div>
     </div>
 
-    <div class="space-y-8">
-      {projects.map((project) => (
-        <div class="group relative bg-surface-900/60 border border-brand-900/30 rounded-2xl overflow-hidden card-hover">
+    <div class="space-y-6">
+      {projects.map((project, idx) => (
+        <div class="card-base overflow-hidden reveal" class:list={{ 'reveal-delay-1': idx % 2 === 1 }}>
           <div class="p-8 md:p-10">
-            <div class="flex items-start justify-between mb-4">
+            <div class="flex items-start justify-between mb-3">
               <div>
                 <div class="flex items-center gap-3 mb-2">
-                  <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
+                  <h3 class="heading-md group-hover:text-brand-400 transition-colors">
                     {project.title}
                   </h3>
-                  <span class={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${
-                    project.status === 'Production'
-                      ? 'bg-green-900/50 text-green-400 border border-green-700/30'
-                      : project.status === 'Active'
-                      ? 'bg-blue-900/50 text-blue-400 border border-blue-700/30'
-                      : 'bg-amber-900/50 text-amber-400 border border-amber-700/30'
-                  }`}>
+                  <span
+                    class="px-2.5 py-0.5 text-xs font-semibold rounded-full"
+                    class:list={{
+                      'badge-production': project.status === 'Production',
+                      'badge-active': project.status === 'Active',
+                      'badge-research': project.status === 'Research',
+                    }}
+                  >
                     {project.status}
                   </span>
                 </div>
-                <p class="text-surface-200/70 leading-relaxed max-w-2xl">
+                <p class="body-md text-surface-400 max-w-2xl">
                   {project.desc}
                 </p>
               </div>
@@ -453,7 +482,7 @@ const organizations = [
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hidden md:flex items-center justify-center w-10 h-10 rounded-lg border border-brand-800/30 text-brand-400 hover:bg-brand-950 hover:border-brand-600 transition-all flex-shrink-0"
+                class="hidden md:flex items-center justify-center w-10 h-10 rounded-lg border border-brand-800/25 text-brand-400 hover:bg-brand-950 hover:border-brand-600 transition-all flex-shrink-0"
                 aria-label={`View ${project.title}`}
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
@@ -461,21 +490,28 @@ const organizations = [
             </div>
             <div class="flex flex-wrap gap-2 mt-4">
               {project.tags.map((tag) => (
-                <span class="px-3 py-1 text-xs font-mono font-medium text-brand-300/80 bg-brand-950/50 rounded-md">
+                <span
+                  class="px-3 py-1 text-xs font-mono font-medium rounded-md"
+                  class:list={{
+                    'tag-teal': project.color === 'teal',
+                    'tag-purple': project.color === 'purple',
+                    'tag-amber': project.color === 'amber',
+                    'tag-emerald': project.color === 'emerald',
+                  }}
+                >
                   {tag}
                 </span>
               ))}
             </div>
           </div>
-          <!-- Bottom accent line -->
-          <div class="h-0.5 bg-gradient-to-r from-transparent via-brand-600/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="card-accent-line" class:list={{ 'visible': project.color === 'teal' }}></div>
         </div>
       ))}
     </div>
 
     <!-- Collaborations -->
-    <div class="mt-16">
-      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+    <div class="mt-16 reveal">
+      <h3 class="heading-md mb-6 flex items-center gap-3">
         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         Collaborations
       </h3>
@@ -485,19 +521,13 @@ const organizations = [
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            class="group bg-surface-900/60 border border-brand-900/30 rounded-2xl p-6 card-hover"
+            class="card-base p-6 block"
           >
-            <h4 class="text-lg font-bold text-white group-hover:text-brand-400 transition-colors mb-2">
-              {project.title}
-            </h4>
-            <p class="text-surface-200/70 text-sm leading-relaxed mb-4">
-              {project.desc}
-            </p>
+            <h4 class="heading-md mb-2">{project.title}</h4>
+            <p class="body-sm text-surface-400 mb-4">{project.desc}</p>
             <div class="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <span class="px-2.5 py-0.5 text-xs font-mono font-medium text-brand-300/80 bg-brand-950/50 rounded-md">
-                  {tag}
-                </span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           </a>
@@ -509,27 +539,27 @@ const organizations = [
 
 <!-- Resume Section -->
 <section id="resume" class="py-24 md:py-32 bg-surface-900/50 relative">
-  <div class="absolute inset-0 bg-grid opacity-20"></div>
+  <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
   <div class="relative max-w-6xl mx-auto px-6">
-    <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">04.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Resume</h2>
-      <div class="flex-1 max-w-xs gradient-line"></div>
+    <div class="section-header reveal">
+      <span class="section-number">04.</span>
+      <h2 class="section-title">Resume</h2>
+      <div class="section-line"></div>
     </div>
 
     <!-- Education -->
-    <div class="mb-16">
-      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+    <div class="mb-16 reveal">
+      <h3 class="heading-md mb-6 flex items-center gap-3">
         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
         Education
       </h3>
-      <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-8 card-hover">
+      <div class="card-base p-8">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h4 class="text-lg font-bold text-white">{education.university}</h4>
+            <h4 class="heading-md">{education.university}</h4>
             <p class="text-brand-400 font-medium">{education.major}</p>
-            <p class="text-surface-200/60 text-sm mt-1">{education.location}</p>
-            <p class="text-surface-200/40 text-xs mt-1">{education.semester} (Kurikulum Gontor)</p>
+            <p class="text-surface-400 text-sm mt-1">{education.location}</p>
+            <p class="text-surface-500 text-xs mt-1">{education.semester}</p>
           </div>
           <div class="text-right">
             <span class="text-3xl font-bold text-brand-400">{education.gpa}</span>
@@ -539,27 +569,28 @@ const organizations = [
     </div>
 
     <!-- Awards -->
-    <div class="mb-16">
-      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+    <div class="mb-16 reveal reveal-delay-1">
+      <h3 class="heading-md mb-6 flex items-center gap-3">
         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
         Awards & Achievements
       </h3>
       <div class="grid md:grid-cols-2 gap-6">
         {awards.map((award) => (
-          <div class="group relative bg-surface-900/60 border border-brand-900/30 rounded-2xl overflow-hidden card-hover">
-            <div class="aspect-[16/10] overflow-hidden bg-surface-800">
+          <div class="card-base overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden bg-surface-800 cursor-pointer lightbox-trigger" data-src={`${basePath}${award.image}`}>
               <img
                 src={`${basePath}${award.image}`}
                 alt={award.title}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
-                <h4 class="text-lg font-bold text-white">{award.title}</h4>
+                <h4 class="font-bold text-white">{award.title}</h4>
                 <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30 flex-shrink-0">{award.year}</span>
               </div>
-              <p class="text-surface-200/70 text-sm leading-relaxed">{award.desc}</p>
+              <p class="body-sm text-surface-400">{award.desc}</p>
             </div>
           </div>
         ))}
@@ -567,20 +598,20 @@ const organizations = [
     </div>
 
     <!-- Organization Experience -->
-    <div>
-      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+    <div class="reveal reveal-delay-2">
+      <h3 class="heading-md mb-6 flex items-center gap-3">
         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         Organization & Leadership
       </h3>
-      <div class="space-y-4">
+      <div class="space-y-3">
         {organizations.map((org) => (
-          <div class="bg-surface-900/60 border border-brand-900/30 rounded-2xl p-6 card-hover">
+          <div class="card-base p-6">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
               <div>
-                <h4 class="text-base font-bold text-white">{org.name}</h4>
+                <h4 class="font-bold text-white">{org.name}</h4>
                 <p class="text-brand-400 text-sm font-medium">{org.role}</p>
               </div>
-              <span class="text-surface-200/50 text-sm font-mono">{org.period}</span>
+              <span class="text-surface-500 text-sm font-mono">{org.period}</span>
             </div>
           </div>
         ))}
@@ -590,101 +621,134 @@ const organizations = [
 </section>
 
 <!-- Research Section -->
-<section id="research" class="py-24 md:py-32 bg-surface-900/50 relative">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="flex items-center gap-4 mb-16">
-      <span class="text-brand-500 font-mono text-sm">05.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Research & Learning</h2>
-      <div class="flex-1 max-w-xs gradient-line"></div>
+<section id="research" class="py-24 md:py-32 relative">
+  <div class="absolute inset-0 bg-grid-subtle opacity-15"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="section-header reveal">
+      <span class="section-number">05.</span>
+      <h2 class="section-title">Research & Learning</h2>
+      <div class="section-line"></div>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
       <!-- ML Research Card -->
-      <div class="group bg-surface-900/60 border border-brand-900/30 rounded-2xl p-8 card-hover">
-        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-6 shadow-lg shadow-brand-900/30">
-          <svg class="w-7 h-7 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+      <div class="card-base p-8 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-5 shadow-lg shadow-brand-900/30">
+          <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3">Deep Learning</h3>
-        <p class="text-surface-200/70 text-sm leading-relaxed mb-4">
+        <h3 class="heading-md mb-3">Deep Learning</h3>
+        <p class="body-sm text-surface-400 mb-4">
           Comparing CNN architectures with Transfer Learning for image classification. Building ML pipelines with TensorFlow, PyTorch, and scikit-learn.
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">CNN</span>
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">Transfer Learning</span>
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">Classification</span>
+          <span class="tag">CNN</span>
+          <span class="tag">Transfer Learning</span>
+          <span class="tag">Classification</span>
         </div>
       </div>
 
       <!-- ML Pipeline Card -->
-      <div class="group bg-surface-900/60 border border-brand-900/30 rounded-2xl p-8 card-hover">
-        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-6 shadow-lg shadow-brand-900/30">
-          <svg class="w-7 h-7 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+      <div class="card-base p-8 reveal reveal-delay-1">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-5 shadow-lg shadow-brand-900/30">
+          <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3">ML Pipelines</h3>
-        <p class="text-surface-200/70 text-sm leading-relaxed mb-4">
+        <h3 class="heading-md mb-3">ML Pipelines</h3>
+        <p class="body-sm text-surface-400 mb-4">
           Building end-to-end machine learning workflows — from data preprocessing and EDA to model training, evaluation, and deployment with MLflow.
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">Pandas</span>
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">MLflow</span>
-          <span class="px-2.5 py-0.5 text-xs font-medium rounded-md bg-brand-950/80 text-brand-300 border border-brand-800/30">Prediction</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">MLflow</span>
+          <span class="tag">Prediction</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-24 md:py-32 relative">
+<section id="contact" class="py-24 md:py-32 bg-surface-900/50 relative">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <div class="flex items-center justify-center gap-4 mb-6">
-      <span class="text-brand-500 font-mono text-sm">06.</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
+    <div class="flex items-center justify-center gap-4 mb-6 reveal">
+      <span class="section-number">06.</span>
+      <h2 class="section-title">Get In Touch</h2>
     </div>
 
-    <p class="text-surface-200/70 text-lg mb-10 max-w-xl mx-auto">
+    <p class="body-lg text-surface-400 mb-10 max-w-xl mx-auto reveal reveal-delay-1">
       I'm always open to discussing new projects, research collaborations,
       or just chatting about technology. Feel free to reach out!
     </p>
 
-    <a
-      href="mailto:farrelafif05@gmail.com"
-      class="inline-flex items-center gap-3 px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-brand-900/50 hover:shadow-brand-700/50 hover:-translate-y-0.5"
-    >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-      Say Hello
-    </a>
+    <div class="reveal reveal-delay-2">
+      <a
+        href="mailto:farrelafif05@gmail.com"
+        class="btn-primary text-base"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        Say Hello
+      </a>
+    </div>
 
     <!-- Social Links -->
-    <div class="flex items-center justify-center gap-6 mt-12">
-      <a href="https://github.com/FarrelGhozy" target="_blank" rel="noopener noreferrer" class="text-surface-200/40 hover:text-brand-400 transition-colors" aria-label="GitHub">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
-      <a href="mailto:farrelafif05@gmail.com" class="text-surface-200/40 hover:text-brand-400 transition-colors" aria-label="Email">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-      </a>
-      <a href="https://linkedin.com/in/farrelghozy" target="_blank" rel="noopener noreferrer" class="text-surface-200/40 hover:text-brand-400 transition-colors" aria-label="LinkedIn">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
-      <a href="https://instagram.com/farrelgzy" target="_blank" rel="noopener noreferrer" class="text-surface-200/40 hover:text-brand-400 transition-colors" aria-label="Instagram">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 6.5h.01M12 2a10 10 0 00-3.16.54 10.01 10.01 0 00-6.3 6.3A10 10 0 0012 22a10 10 0 0010-10 10.01 10.01 0 00-6.3-6.3A10 10 0 0012 2zm0 4a6 6 0 100 12 6 6 0 000-12zm-4 6a4 4 0 118 0 4 4 0 01-8 0z"/></svg>
-      </a>
+    <div class="flex items-center justify-center gap-6 mt-12 reveal reveal-delay-3">
+      {[
+        { href: 'https://github.com/FarrelGhozy', label: 'GitHub',
+          path: 'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' },
+        { href: 'mailto:farrelafif05@gmail.com', label: 'Email',
+          path: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
+        { href: 'https://linkedin.com/in/farrelghozy', label: 'LinkedIn',
+          path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
+        { href: 'https://instagram.com/farrelgzy', label: 'Instagram',
+          path: 'M16.5 6.5h.01M12 2a10 10 0 00-3.16.54 10.01 10.01 0 00-6.3 6.3A10 10 0 0012 22a10 10 0 0010-10 10.01 10.01 0 00-6.3-6.3A10 10 0 0012 2zm0 4a6 6 0 100 12 6 6 0 000-12zm-4 6a4 4 0 118 0 4 4 0 01-8 0z' },
+      ].map((social) => (
+        <a
+          href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-surface-500 hover:text-brand-400 transition-colors"
+          aria-label={social.label}
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d={social.path} />
+          </svg>
+        </a>
+      ))}
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-8 border-t border-brand-900/30">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <p class="text-sm text-surface-200/40 font-mono">
-      Designed & Built by <span class="text-brand-400">Farrel Ghozy</span> • Astro + Tailwind CSS
-    </p>
+<footer class="py-10 border-t border-brand-900/25">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-surface-500 font-mono">
+        Designed & Built by <span class="text-brand-400">Farrel Ghozy</span>
+      </p>
+      <div class="flex items-center gap-6 text-sm">
+        <span class="text-surface-500">Astro + Tailwind CSS</span>
+        <button
+          id="back-to-top"
+          class="inline-flex items-center gap-1.5 text-surface-400 hover:text-brand-400 transition-colors cursor-pointer bg-transparent border-none font-inherit text-sm"
+        >
+          Back to top
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </footer>
 
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox-overlay">
+  <button class="close-btn" id="lightbox-close">✕</button>
+  <img id="lightbox-img" src="" alt="Award certificate" />
+</div>
+
+<!-- Scripts -->
 <script is:inline>
-  // Mobile menu toggle
+  // ── Mobile menu toggle ──
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   if (btn && menu) {
@@ -698,17 +762,113 @@ const organizations = [
     });
   }
 
-  // Navbar scroll effect
+  // ── Navbar scroll effect ──
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     if (nav) {
-      if (window.scrollY > 50) {
-        nav.classList.add('shadow-lg', 'shadow-black/20');
-      } else {
-        nav.classList.remove('shadow-lg', 'shadow-black/20');
-      }
+      nav.classList.toggle('shadow-lg shadow-black/20', window.scrollY > 50);
     }
   });
+
+  // ── Back to top ──
+  const backBtn = document.getElementById('back-to-top');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ── Scroll reveal (Intersection Observer) ──
+  const revealElements = document.querySelectorAll('.reveal');
+  if (revealElements.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealElements.forEach((el) => observer.observe(el));
+  }
+
+  // ── Lightbox ──
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+
+  if (lightbox && lightboxImg) {
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const src = trigger.getAttribute('data-src');
+        if (src) {
+          lightboxImg.src = src;
+          lightbox.classList.add('open');
+        }
+      });
+    });
+
+    const closeLightbox = () => lightbox.classList.remove('open');
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
+
+  // ── Typing effect ──
+  (function() {
+    const el = document.getElementById('typing-text');
+    if (!el) return;
+
+    const roles = [
+      'Full-stack Developer',
+      'ML Enthusiast',
+      'Informatics Student',
+      'Open Source Contributor',
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+
+    function tick() {
+      const target = roles[roleIndex];
+
+      if (isDeleting) {
+        currentText = target.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        currentText = target.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      el.textContent = currentText;
+
+      if (!isDeleting && charIndex === target.length) {
+        setTimeout(() => { isDeleting = true; tick(); }, 2000);
+        return;
+      }
+
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(tick, 500);
+        return;
+      }
+
+      const delay = isDeleting ? 40 : 80;
+      setTimeout(tick, delay);
+    }
+
+    tick();
+  })();
 </script>
 
 </Layout>
