@@ -15,47 +15,55 @@ const skills = [
     category: 'Frontend',
     items: [
       { name: 'JavaScript', level: 5 },
-      { name: 'TypeScript', level: 4 },
+      { name: 'TypeScript', level: 5 },
       { name: 'React', level: 4 },
-      { name: 'Tailwind CSS', level: 4 },
+      { name: 'Next.js', level: 4 },
+      { name: 'Tailwind CSS', level: 5 },
       { name: 'Astro', level: 4 },
+      { name: 'Vite', level: 4 },
       { name: 'HTML & CSS', level: 5 },
-      { name: 'Bootstrap', level: 3 },
     ],
     icon: 'frontend',
   },
   {
     category: 'Backend',
     items: [
+      { name: 'Bun', level: 4 },
+      { name: 'ElysiaJS', level: 4 },
       { name: 'Node.js', level: 4 },
       { name: 'Express', level: 4 },
-      { name: 'Python', level: 3 },
+      { name: 'Python', level: 4 },
       { name: 'PHP', level: 3 },
-      { name: 'C++', level: 3 },
-      { name: 'REST API', level: 4 },
+      { name: 'Prisma / Drizzle', level: 4 },
+      { name: 'REST API', level: 5 },
     ],
     icon: 'backend',
   },
   {
-    category: 'Mobile',
+    category: 'Mobile & IoT',
     items: [
-      { name: 'Kotlin', level: 3 },
-      { name: 'Android Studio', level: 3 },
-      { name: 'XML Layout', level: 3 },
+      { name: 'Kotlin', level: 4 },
+      { name: 'Jetpack Compose', level: 4 },
+      { name: 'Flutter', level: 4 },
+      { name: 'Dart', level: 4 },
+      { name: 'ESP32 / Arduino', level: 3 },
+      { name: 'Android Studio', level: 4 },
     ],
     icon: 'mobile',
   },
   {
     category: 'Database & Infra',
     items: [
+      { name: 'PostgreSQL', level: 4 },
+      { name: 'MySQL', level: 4 },
       { name: 'MongoDB', level: 4 },
-      { name: 'MySQL', level: 3 },
-      { name: 'Docker', level: 3 },
-      { name: 'Linux', level: 4 },
-      { name: 'Nginx', level: 3 },
-      { name: 'Proxmox', level: 3 },
-      { name: 'K3s', level: 2 },
-      { name: 'Vercel', level: 3 },
+      { name: 'Supabase', level: 4 },
+      { name: 'Docker', level: 4 },
+      { name: 'Linux', level: 5 },
+      { name: 'Nginx', level: 4 },
+      { name: 'Proxmox', level: 4 },
+      { name: 'K3s', level: 3 },
+      { name: 'Cloudflare', level: 4 },
     ],
     icon: 'infra',
   },
@@ -64,6 +72,8 @@ const skills = [
     items: [
       { name: 'TensorFlow', level: 3 },
       { name: 'PyTorch', level: 3 },
+      { name: 'ONNX Runtime', level: 3 },
+      { name: 'RAG / LLM', level: 3 },
       { name: 'Pandas', level: 4 },
       { name: 'NumPy', level: 4 },
       { name: 'scikit-learn', level: 3 },
@@ -74,10 +84,11 @@ const skills = [
   {
     category: 'Professional',
     items: [
+      { name: 'IT Infrastructure', level: 4 },
       { name: 'Time Management', level: 4 },
       { name: 'Communication', level: 5 },
       { name: 'Problem Solving', level: 5 },
-      { name: 'Team Leadership', level: 4 },
+      { name: 'Team Leadership', level: 5 },
     ],
     icon: 'nontech',
   },
@@ -85,51 +96,87 @@ const skills = [
 
 const projects = [
   {
+    title: 'WANI — Warung AI Nexus Indonesia',
+    desc: 'AI-powered omnichannel commerce platform for Indonesian UMKM. Combines WhatsApp automation via WAHA, an AI REST API pipeline, merchant dashboard, and a static storefront website generator across four modular packages.',
+    tags: ['TypeScript', 'Bun', 'React', 'WAHA', 'AI Pipeline', 'Docker'],
+    link: 'https://github.com/FarrelGhozy/WANI',
+    status: 'Production',
+    color: 'teal',
+  },
+  {
+    title: 'UNIDA Student Championship (TALENTA26)',
+    desc: 'Full-stack competition coaching and student achievement management platform for UNIDA Gontor. Features team recruitment, preparation roadmaps, lecturer consultation, S3-backed evidence storage, RBAC, and leaderboards.',
+    tags: ['React 19', 'TypeScript', 'Bun', 'ElysiaJS', 'MySQL', 'Docker'],
+    link: 'https://github.com/FarrelGhozy/TALENTA26',
+    status: 'Active',
+    color: 'purple',
+  },
+  {
+    title: 'ANDROMEDA — IoT Drip Irrigation',
+    desc: 'Android Routine Monitoring Electronic Drip Automation built for PDB Desa Merayan. Solar-powered ESP32 soil moisture sensing and solenoid valve control paired with an offline-capable Flutter Android app.',
+    tags: ['Flutter', 'Dart', 'ESP32', 'C++', 'Supabase', 'IoT'],
+    link: 'https://github.com/FarrelGhozy/andromeda',
+    status: 'Production',
+    color: 'emerald',
+  },
+  {
+    title: 'UNIDA Prayer V2',
+    desc: 'Campus Siman prayer schedule platform and WhatsApp reminder system for UNIDA Gontor. Built with astronomical prayer calculation, a real-time public countdown dashboard, admin console, and crash-resilient MySQL scheduler worker.',
+    tags: ['Next.js', 'TypeScript', 'Bun', 'ElysiaJS', 'WAHA', 'MySQL'],
+    link: 'https://github.com/FarrelGhozy/UNIDA-Prayer-V2',
+    status: 'Production',
+    color: 'teal',
+  },
+  {
+    title: 'FaceGate — Edge AI Gate System',
+    desc: 'On-device face recognition gate monitoring system for boarding schools and dormitories. Multi-module Kotlin Android kiosk & admin apps powered by InsightFace ONNX Runtime with a Bun and PostgreSQL pgvector backend.',
+    tags: ['Kotlin', 'Jetpack Compose', 'ONNX Runtime', 'ElysiaJS', 'pgvector'],
+    link: 'https://github.com/FarrelGhozy/App-Edge-AI',
+    status: 'Active',
+    color: 'purple',
+  },
+  {
+    title: 'ISHAS — Boarding School K3L Platform',
+    desc: 'Integrated Safety and Health Assessment System for boarding schools. Features a public monitoring dashboard, multi-role validation workflow (Admin, Validator, Partner Pesantren), reporting portal, and containerized MySQL backend.',
+    tags: ['React', 'TypeScript', 'Bun', 'MySQL', 'Docker', 'Nginx'],
+    link: 'https://github.com/FarrelGhozy/ISHAS',
+    status: 'Active',
+    color: 'amber',
+  },
+  {
+    title: 'SIMOHE — IoT Waste Processing Monitor',
+    desc: 'IoT monitoring and control platform for livestock waste fertilizer processing. Tracks water temperature and NH3 ammonia gas via Arduino Mega + ESP8266, automates safety heater cutoffs, and serves Android & Web Flutter clients.',
+    tags: ['Flutter', 'Dart', 'Arduino / ESP8266', 'Supabase', 'IoT'],
+    link: 'https://github.com/FarrelGhozy/SIMOHE',
+    status: 'Production',
+    color: 'emerald',
+  },
+  {
     title: 'Kasir UTC 02',
-    desc: 'Point-of-sale system for Unida Technology Centre workshop. Features transaction management, service ticketing, inventory tracking, and WhatsApp bot integration with WAHA.',
+    desc: 'Point-of-sale and service management platform for the Unida Technology Center workshop. Features transaction management, service ticketing, inventory tracking, and automated WhatsApp customer notifications with WAHA.',
     tags: ['Node.js', 'Express', 'MongoDB', 'WAHA', 'Vercel'],
     link: 'https://github.com/FarrelGhozy/Kasir_UTC_02',
     status: 'Production',
     color: 'teal',
   },
-  {
-    title: 'CNN vs Transfer Learning',
-    desc: 'Research project comparing CNN architectures and Transfer Learning approaches for image classification. Includes model training, evaluation pipelines, and performance analysis.',
-    tags: ['Python', 'TensorFlow', 'PyTorch', 'Jupyter', 'Deep Learning'],
-    link: 'https://github.com/FarrelGhozy/CNN-vs-Transfer-Learning-untuk-Klasifikasi-Citra',
-    status: 'Research',
-    color: 'amber',
-  },
+];
+
+const collabProjects = [
   {
     title: 'Sembako Chain AI',
     desc: 'AI-based hybrid food distribution ecosystem for price stabilization and economic inclusion. Combines multi-criteria analysis with ML-powered recommendations.',
     tags: ['TypeScript', 'AI', 'Recommendation System', 'Multi-criteria'],
     link: 'https://github.com/FarrelGhozy/sembako-chain-ai',
-    status: 'Active',
-    color: 'purple',
   },
   {
     title: 'Retak ID',
-    desc: 'Crowdsourcing platform for early detection of landslide soil cracks. Community-driven reporting, interactive mapping, and alert system.',
+    desc: 'Crowdsourcing platform for early detection of landslide soil cracks. Community-driven reporting, interactive mapping, and early alert system.',
     tags: ['JavaScript', 'Crowdsourcing', 'Mapping', 'Community'],
     link: 'https://github.com/FarrelGhozy/retakId',
-    status: 'Active',
-    color: 'emerald',
   },
-  {
-    title: 'Deforest.id',
-    desc: 'LaTeX-based academic writing project focused on deforestation analysis and environmental research documentation.',
-    tags: ['LaTeX', 'Academic', 'Research'],
-    link: 'https://github.com/FarrelGhozy/Deforest.id',
-    status: 'Research',
-    color: 'amber',
-  },
-];
-
-const collabProjects = [
   {
     title: 'Corrupt (jaweed3)',
-    desc: 'Corruption Education Simulator — interactive simulation to educate about corruption impacts. Contributed to this collaborative project.',
+    desc: 'Corruption Education Simulator — interactive simulation to educate about corruption impacts. Contributed to this collaborative web project.',
     tags: ['JavaScript', 'Education', 'Simulation'],
     link: 'https://github.com/jaweed3/corrupt',
   },
@@ -153,27 +200,52 @@ const education = {
 
 const awards = [
   {
-    title: '2nd Place, Coding Day',
-    year: '2026',
-    desc: 'Achieved 2nd place in web development competition among all Informatics Engineering students.',
-    image: 'award-coding-day.webp',
-  },
-  {
     title: 'The Best Thematic, Hackathon SRE ITB',
     year: '2026',
-    desc: 'Awarded The Best Thematic at the SRE ITB 2026 Hackathon.',
+    desc: 'Awarded Best Thematic Hackathon Competition at the Integrated Youth Renewable Energy Festival (IYREF) 2026, organized by Society of Renewable Energy ITB.',
     image: 'award-sre-itb.webp',
+  },
+  {
+    title: '2nd Place, Coding Day',
+    year: '2026',
+    desc: 'Achieved 2nd place in the Website Developer competition at Coding Day 2026 among all Informatics Engineering students at UNIDA Gontor (Team CORRUPTOR).',
+    image: 'award-coding-day.webp',
+  },
+];
+
+const experiences = [
+  {
+    name: 'LPTSI UNIDA Gontor',
+    subtitle: 'Lembaga Pengembangan Teknologi dan Sistem Informasi',
+    role: 'IT Infrastructure Staff',
+    period: 'Jun 2026 – Present',
+    current: true,
+  },
+  {
+    name: 'Bengkel Unida Technology Center',
+    role: 'Head of Business Unit',
+    period: 'Apr 2025 – May 2026',
+    current: false,
+  },
+  {
+    name: 'Teaching Assistant — Basic Programming',
+    role: 'Teaching Assistant · UNIDA Gontor',
+    period: 'Feb 2025 – Aug 2025',
+    current: false,
+  },
+  {
+    name: 'Teaching Assistant — Algorithms & Data Structures',
+    role: 'Teaching Assistant · UNIDA Gontor',
+    period: 'Feb 2025 – Aug 2025',
+    current: false,
   },
 ];
 
 const organizations = [
-  { name: 'Himpunan Mahasiswa Teknik Informatika', role: 'Academic Cadre', period: 'Apr 2024 – May 2025' },
-  { name: 'Bengel TI', role: 'Cadre', period: 'Mar 2024 – Mar 2025' },
-  { name: 'Teaching Assistant — Basic Programming', role: 'TA', period: 'Feb 2025 – Aug 2025' },
-  { name: 'Teaching Assistant — Algorithms & Data Structures', role: 'TA', period: 'Feb 2025 – Aug 2025' },
+  { name: 'Himpunan Mahasiswa Teknik Informatika (HMTI)', role: 'Chairperson', period: 'May 2025 – Apr 2026' },
+  { name: 'Himpunan Mahasiswa Teknik Informatika (HMTI)', role: 'Academic Cadre', period: 'Apr 2024 – May 2025' },
   { name: 'Festival Teknik Informatika', role: 'Chairperson', period: 'Aug 2024 – Sep 2024' },
-  { name: 'Himpunan Mahasiswa Teknik Informatika', role: 'Chairperson', period: 'May 2025 – Present' },
-  { name: 'Bengel Unida Technology Center', role: 'Head of Business Unit', period: 'Apr 2025 – Present' },
+  { name: 'Bengkel TI', role: 'Cadre', period: 'Mar 2024 – Mar 2025' },
 ];
 ---
 
@@ -259,8 +331,8 @@ const organizations = [
 
     <!-- Description -->
     <p class="body-lg text-surface-400 max-w-2xl mx-auto mb-10">
-      Full-stack development enthusiast, exploring machine learning,
-      and building projects one commit at a time.
+      Full-stack developer, IT infrastructure staff at LPTSI UNIDA Gontor,
+      and machine learning &amp; IoT enthusiast — building impactful systems one commit at a time.
     </p>
 
     <!-- CTAs -->
@@ -297,34 +369,37 @@ const organizations = [
       <!-- Text -->
       <div class="md:col-span-3 space-y-5 body-md reveal reveal-delay-1">
         <p class="text-surface-300">
-          I'm an Informatics student at
+          I'm an Informatics Engineering student at
           <span class="text-brand-400 font-medium">Universitas Darussalam Gontor</span>
-          passionate about web development and machine learning. I love building projects
-          that solve real problems.
+          passionate about full-stack engineering, IT infrastructure, IoT automation, and applied AI.
+          I love building reliable systems that solve real-world problems.
         </p>
         <p class="text-surface-300">
-          Currently working on a point-of-sale system for
-          <span class="text-brand-400 font-medium">Unida Technology Centre</span>
-          using Node.js, Express, and MongoDB — integrating WhatsApp bot
-          automation and inventory management.
+          Since June 2026, I have been serving as
+          <span class="text-brand-400 font-medium">IT Infrastructure Staff</span> at
+          <span class="text-brand-400 font-medium">LPTSI UNIDA Gontor</span>
+          (Lembaga Pengembangan Teknologi dan Sistem Informasi), maintaining campus servers,
+          network infrastructure, and production services. Previously, I served as Head of Business Unit at
+          Bengkel Unida Technology Center and Chairperson of HMTI UNIDA Gontor.
         </p>
         <p class="text-surface-300">
-          I'm also exploring deep learning — comparing CNN architectures
-          with Transfer Learning for image classification, and building
-          ML pipelines with Python and Jupyter.
+          On the engineering side, I build production web platforms, mobile apps (Flutter &amp; Kotlin),
+          Edge AI systems, and IoT solutions — ranging from AI-powered commerce (<span class="text-surface-200">WANI</span>)
+          and campus platforms (<span class="text-surface-200">TALENTA26</span>, <span class="text-surface-200">UNIDA Prayer V2</span>)
+          to automated smart irrigation (<span class="text-surface-200">ANDROMEDA</span>).
         </p>
         <p class="text-surface-300">
-          Continuously learning new technologies and improving my skills
-          through hands-on projects, coursework, and open source collaboration.
+          Always experimenting and continuously growing through production operations,
+          community projects, research, and open-source collaboration.
         </p>
 
         <!-- Quick Facts -->
         <div class="grid grid-cols-2 gap-4 pt-4">
           {[
-            ['Web Development', '▹'],
-            ['Machine Learning', '▹'],
-            ['Android (Kotlin)', '▹'],
-            ['Open Source', '▹'],
+            ['Full-Stack Web', '▹'],
+            ['IT Infrastructure', '▹'],
+            ['Mobile & IoT', '▹'],
+            ['Machine Learning & AI', '▹'],
           ].map(([label, marker]) => (
             <div class="flex items-center gap-3 text-sm text-surface-300">
               <span class="text-brand-400">{marker}</span>
@@ -345,8 +420,8 @@ const organizations = [
             </div>
             <div class="text-center space-y-2">
               <h3 class="heading-md">Farrel Ghozy Affifudin</h3>
-              <p class="text-brand-400 text-sm font-medium">Informatics Student</p>
-              <p class="text-surface-400 text-sm">Universitas Darussalam Gontor</p>
+              <p class="text-brand-400 text-sm font-medium">IT Infrastructure Staff &amp; Full-Stack Dev</p>
+              <p class="text-surface-400 text-sm">LPTSI · Universitas Darussalam Gontor</p>
             </div>
 
             <!-- Social links in profile card -->
@@ -394,7 +469,7 @@ const organizations = [
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {skills.map((skill, idx) => (
         <div
-          class="card-base p-6 reveal"
+          class="card-base group p-6 reveal"
           class:list={{ 'reveal-delay-1': idx % 3 === 1, 'reveal-delay-2': idx % 3 === 2 }}
         >
           <!-- Category Icon -->
@@ -453,18 +528,23 @@ const organizations = [
       <div class="section-line"></div>
     </div>
 
-    <div class="space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
       {projects.map((project, idx) => (
-        <div class="card-base overflow-hidden reveal" class:list={{ 'reveal-delay-1': idx % 2 === 1 }}>
-          <div class="p-8 md:p-10">
-            <div class="flex items-start justify-between mb-3">
+        <div class="card-base group overflow-hidden flex flex-col justify-between reveal" class:list={{ 'reveal-delay-1': idx % 2 === 1 }}>
+          <div class="p-7 md:p-8 flex-1 flex flex-col">
+            <div class="flex items-start justify-between gap-4 mb-3">
               <div>
-                <div class="flex items-center gap-3 mb-2">
-                  <h3 class="heading-md group-hover:text-brand-400 transition-colors">
+                <div class="flex flex-wrap items-center gap-2.5 mb-2">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors leading-snug"
+                  >
                     {project.title}
-                  </h3>
+                  </a>
                   <span
-                    class="px-2.5 py-0.5 text-xs font-semibold rounded-full"
+                    class="px-2.5 py-0.5 text-xs font-semibold rounded-full flex-shrink-0"
                     class:list={{
                       'badge-production': project.status === 'Production',
                       'badge-active': project.status === 'Active',
@@ -474,24 +554,24 @@ const organizations = [
                     {project.status}
                   </span>
                 </div>
-                <p class="body-md text-surface-400 max-w-2xl">
-                  {project.desc}
-                </p>
               </div>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hidden md:flex items-center justify-center w-10 h-10 rounded-lg border border-brand-800/25 text-brand-400 hover:bg-brand-950 hover:border-brand-600 transition-all flex-shrink-0"
-                aria-label={`View ${project.title}`}
+                class="flex items-center justify-center w-9 h-9 rounded-lg border border-brand-800/25 text-brand-400 hover:bg-brand-950 hover:border-brand-600 transition-all flex-shrink-0"
+                aria-label={`View ${project.title} on GitHub`}
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </a>
             </div>
-            <div class="flex flex-wrap gap-2 mt-4">
+            <p class="body-sm text-surface-400 flex-1">
+              {project.desc}
+            </p>
+            <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-brand-900/30">
               {project.tags.map((tag) => (
                 <span
-                  class="px-3 py-1 text-xs font-mono font-medium rounded-md"
+                  class="px-2.5 py-1 text-xs font-mono font-medium rounded-md"
                   class:list={{
                     'tag-teal': project.color === 'teal',
                     'tag-purple': project.color === 'purple',
@@ -504,9 +584,21 @@ const organizations = [
               ))}
             </div>
           </div>
-          <div class="card-accent-line" class:list={{ 'visible': project.color === 'teal' }}></div>
+          <div class="card-accent-line" class:list={{ 'visible': project.status === 'Production' }}></div>
         </div>
       ))}
+    </div>
+
+    <div class="mt-8 text-center reveal">
+      <a
+        href="https://github.com/FarrelGhozy?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-secondary text-sm"
+      >
+        View All Repositories on GitHub
+        <span class="inline-block">→</span>
+      </a>
     </div>
 
     <!-- Collaborations -->
@@ -568,40 +660,43 @@ const organizations = [
       </div>
     </div>
 
-    <!-- Awards -->
+    <!-- Work & Academic Experience -->
     <div class="mb-16 reveal reveal-delay-1">
       <h3 class="heading-md mb-6 flex items-center gap-3">
-        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-        Awards & Achievements
+        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        Work &amp; Academic Experience
       </h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        {awards.map((award) => (
-          <div class="card-base overflow-hidden">
-            <div class="aspect-[4/3] overflow-hidden bg-surface-800 cursor-pointer lightbox-trigger" data-src={`${basePath}${award.image}`}>
-              <img
-                src={`${basePath}${award.image}`}
-                alt={award.title}
-                loading="lazy"
-                class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex items-start justify-between mb-3">
-                <h4 class="font-bold text-white">{award.title}</h4>
-                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30 flex-shrink-0">{award.year}</span>
+      <div class="space-y-3">
+        {experiences.map((exp) => (
+          <div class="card-base p-6" class:list={{ 'border-brand-600/40': exp.current }}>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+              <div>
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <h4 class="font-bold text-white">{exp.name}</h4>
+                  {exp.current && (
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold rounded-full badge-production">
+                      <span class="w-1.5 h-1.5 rounded-full bg-teal-300 animate-pulse"></span>
+                      Current
+                    </span>
+                  )}
+                </div>
+                {exp.subtitle && (
+                  <p class="text-surface-400 text-xs mt-0.5">{exp.subtitle}</p>
+                )}
+                <p class="text-brand-400 text-sm font-medium mt-1">{exp.role}</p>
               </div>
-              <p class="body-sm text-surface-400">{award.desc}</p>
+              <span class="text-surface-400 text-sm font-mono flex-shrink-0">{exp.period}</span>
             </div>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Organization Experience -->
-    <div class="reveal reveal-delay-2">
+    <!-- Organization & Leadership -->
+    <div class="mb-16 reveal reveal-delay-2">
       <h3 class="heading-md mb-6 flex items-center gap-3">
         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-        Organization & Leadership
+        Organization &amp; Leadership
       </h3>
       <div class="space-y-3">
         {organizations.map((org) => (
@@ -611,7 +706,36 @@ const organizations = [
                 <h4 class="font-bold text-white">{org.name}</h4>
                 <p class="text-brand-400 text-sm font-medium">{org.role}</p>
               </div>
-              <span class="text-surface-500 text-sm font-mono">{org.period}</span>
+              <span class="text-surface-500 text-sm font-mono flex-shrink-0">{org.period}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="reveal reveal-delay-2">
+      <h3 class="heading-md mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        Awards &amp; Achievements
+      </h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        {awards.map((award) => (
+          <div class="card-base group overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden bg-surface-800 cursor-pointer lightbox-trigger" data-src={`${basePath}${award.image}`}>
+              <img
+                src={`${basePath}${award.image}`}
+                alt={award.title}
+                loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <h4 class="font-bold text-white">{award.title}</h4>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-900/50 text-amber-400 border border-amber-700/30 flex-shrink-0">{award.year}</span>
+              </div>
+              <p class="body-sm text-surface-400">{award.desc}</p>
             </div>
           </div>
         ))}
@@ -630,38 +754,69 @@ const organizations = [
       <div class="section-line"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- ML Research Card -->
-      <div class="card-base p-8 reveal">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Deep Learning & Vision Card -->
+      <a
+        href="https://github.com/FarrelGhozy/CNN-vs-Transfer-Learning-untuk-Klasifikasi-Citra"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-base group p-8 block reveal"
+      >
         <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-5 shadow-lg shadow-brand-900/30">
           <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
         </div>
-        <h3 class="heading-md mb-3">Deep Learning</h3>
+        <h3 class="heading-md mb-3 group-hover:text-brand-400 transition-colors">Deep Learning &amp; Vision</h3>
         <p class="body-sm text-surface-400 mb-4">
-          Comparing CNN architectures with Transfer Learning for image classification. Building ML pipelines with TensorFlow, PyTorch, and scikit-learn.
+          Comparing CNN architectures with Transfer Learning for image classification and plant disease detection using TensorFlow, PyTorch, and ONNX Edge AI.
         </p>
         <div class="flex flex-wrap gap-2">
           <span class="tag">CNN</span>
           <span class="tag">Transfer Learning</span>
-          <span class="tag">Classification</span>
+          <span class="tag">Edge AI</span>
         </div>
-      </div>
+      </a>
 
-      <!-- ML Pipeline Card -->
-      <div class="card-base p-8 reveal reveal-delay-1">
+      <!-- RAG & Applied AI Card -->
+      <a
+        href="https://github.com/FarrelGhozy/Fine-tuned-Chatbot-Tim-Legal-berbasis-RAG"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-base group p-8 block reveal reveal-delay-1"
+      >
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-5 shadow-lg shadow-brand-900/30">
+          <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+        </div>
+        <h3 class="heading-md mb-3 group-hover:text-brand-400 transition-colors">RAG &amp; Legal Chatbot</h3>
+        <p class="body-sm text-surface-400 mb-4">
+          Fine-tuned legal team assistant powered by Retrieval-Augmented Generation (RAG) and vector embeddings for grounded document retrieval.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag">RAG</span>
+          <span class="tag">LLM</span>
+          <span class="tag">NLP</span>
+        </div>
+      </a>
+
+      <!-- ML Pipelines & MLOps Card -->
+      <a
+        href="https://github.com/FarrelGhozy/Workflow-CI"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-base group p-8 block reveal reveal-delay-2"
+      >
         <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center mb-5 shadow-lg shadow-brand-900/30">
           <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
         </div>
-        <h3 class="heading-md mb-3">ML Pipelines</h3>
+        <h3 class="heading-md mb-3 group-hover:text-brand-400 transition-colors">ML Pipelines &amp; CI</h3>
         <p class="body-sm text-surface-400 mb-4">
-          Building end-to-end machine learning workflows — from data preprocessing and EDA to model training, evaluation, and deployment with MLflow.
+          End-to-end machine learning workflows — from preprocessing and DSP filtering to automated model training, tracking, and CI evaluation with MLflow.
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="tag">Pandas</span>
           <span class="tag">MLflow</span>
-          <span class="tag">Prediction</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Pandas</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -694,11 +849,11 @@ const organizations = [
       {[
         { href: 'https://github.com/FarrelGhozy', label: 'GitHub',
           path: 'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' },
-        { href: 'mailto:farrelafif05@gmail.com', label: 'Email',
+        { href: 'mailto:farrelafif05@gmail.com', label: 'Email', fill: 'none',
           path: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
         { href: 'https://linkedin.com/in/farrelghozy', label: 'LinkedIn',
           path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
-        { href: 'https://instagram.com/farrelgzy', label: 'Instagram',
+        { href: 'https://instagram.com/farrelgzy', label: 'Instagram', fill: 'none',
           path: 'M16.5 6.5h.01M12 2a10 10 0 00-3.16.54 10.01 10.01 0 00-6.3 6.3A10 10 0 0012 22a10 10 0 0010-10 10.01 10.01 0 00-6.3-6.3A10 10 0 0012 2zm0 4a6 6 0 100 12 6 6 0 000-12zm-4 6a4 4 0 118 0 4 4 0 01-8 0z' },
       ].map((social) => (
         <a
@@ -708,8 +863,8 @@ const organizations = [
           class="text-surface-500 hover:text-brand-400 transition-colors"
           aria-label={social.label}
         >
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d={social.path} />
+          <svg class="w-6 h-6" fill={social.fill || 'currentColor'} stroke={social.fill === 'none' ? 'currentColor' : 'none'} viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={social.path} />
           </svg>
         </a>
       ))}
@@ -766,7 +921,9 @@ const organizations = [
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
     if (nav) {
-      nav.classList.toggle('shadow-lg shadow-black/20', window.scrollY > 50);
+      const scrolled = window.scrollY > 50;
+      nav.classList.toggle('shadow-lg', scrolled);
+      nav.classList.toggle('shadow-black/20', scrolled);
     }
   });
 
@@ -829,7 +986,8 @@ const organizations = [
 
     const roles = [
       'Full-stack Developer',
-      'ML Enthusiast',
+      'IT Infrastructure Staff',
+      'ML & IoT Enthusiast',
       'Informatics Student',
       'Open Source Contributor',
     ];
