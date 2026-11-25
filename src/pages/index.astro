@@ -113,10 +113,10 @@ const projects = [
   },
   {
     title: 'ANDROMEDA — IoT Drip Irrigation',
-    desc: 'Android Routine Monitoring Electronic Drip Automation built for PDB Desa Merayan. Solar-powered ESP32 soil moisture sensing and solenoid valve control paired with an offline-capable Flutter Android app.',
+    desc: 'Android Routine Monitoring Electronic Drip Automation built for the PDB Desa Merayan community program (Jun – Sep 2026). Solar-powered ESP32 soil moisture sensing and solenoid valve control paired with an offline-capable Flutter Android app.',
     tags: ['Flutter', 'Dart', 'ESP32', 'C++', 'Supabase', 'IoT'],
     link: 'https://github.com/FarrelGhozy/andromeda',
-    status: 'Production',
+    status: 'Completed · Sep 2026',
     color: 'emerald',
   },
   {
@@ -549,6 +549,7 @@ const organizations = [
                       'badge-production': project.status === 'Production',
                       'badge-active': project.status === 'Active',
                       'badge-research': project.status === 'Research',
+                      'badge-completed': project.status.startsWith('Completed'),
                     }}
                   >
                     {project.status}

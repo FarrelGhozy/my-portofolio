@@ -264,6 +264,12 @@
     border: 1px solid rgba(252, 211, 77, 0.2);
   }
 
+  .badge-completed {
+    background: rgba(6, 78, 59, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(110, 231, 183, 0.25);
+  }
+
   /* Skill level indicators */
   .skill-dot {
     width: 6px;
